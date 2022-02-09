@@ -1,0 +1,55 @@
+<%- include('head') %>
+<body>
+	<%- include('header') %>
+	<main>
+		<form id="carrito" action="/carrito/actualizar?_method=PUT" method="POST">
+			<!--ENCABEZADO-->
+			<section id="encabezado">
+				<div id="título">
+					<i class="fas fa-shopping-basket"></i>
+					<h1>Carrito de Compras</h1>
+				</div>
+				<div>
+					<% if (carritos.length > 0) { %>
+						<!--IMPORTE TOTAL Y PAGAR-->
+						<div id="total">
+							<h2>Importe a pagar:</h2>
+							<% let acumulador = 0 %> 
+							<% for (n of carritos) { %>
+								<% acumulador = acumulador + n.cantidad * n.producto.precio %> 
+							<% } %> 
+							<h2 id="importe">$ <%= toThousand(acumulador) %> </h2>
+						</div>
+						<!--CONTINUAR Y PAGAR-->
+						<div id="continuar-y-pagar">
+							<button id="comprar"><a href="/ventas/kickOff">Comprar</a></button>
+							<button id="guardarCambios" class="ocultar" type="submit">Guardar cambios</button>
+						</div>
+					<% } %>
+				</div>
+			</section>
+			<!--REGISTROS-->
+			<section>
+				<% if (carritos.length > 0) { %>
+					<% let cantCarritos = carritos.length %>
+					<input class="ocultar" name="cantCarritos" type="number" value="<%= cantCarritos %>">
+					<% for (let i = 0; i < cantCarritos; i++) { %>
+						<%- include('carrito-registro', {
+							numCarrito: i,
+							carrito: carritos[i],
+							cantidad: carritos[i].cantidad,
+							producto: carritos[i].producto, 
+							imagen: carritos[i].imagen,
+							toThousand,
+						}) %>
+					<% } %>
+				<% } else { %>
+					<p id="carritoVacio">No tenés productos en el carrito</p>
+				<% } %>
+			</section>
+		</form>
+	</main>
+	<%- include('footer') %>
+</body>
+
+</html>

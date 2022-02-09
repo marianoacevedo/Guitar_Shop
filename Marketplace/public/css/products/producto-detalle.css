@@ -1,0 +1,113 @@
+.contenedor-padre {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 20px;
+}
+
+.producto {
+	width: 100%;
+	text-align: center;
+}
+
+.img {
+	width: 45%;
+}
+
+article {
+	justify-content: center;
+}
+
+img {
+	width: auto;
+	height: auto;
+	max-width: 400px;
+	max-height: 450px;
+}
+
+.descripcion-contenedor {
+	width: 45%;
+	padding: 0px 10px;
+}
+
+.descripcion {
+	position: relative;
+	top: -30px;
+	width: 100%;
+}
+
+.descripcion button {
+	padding: 10px;
+	border-radius: 5px;
+	margin: 10px;
+	color: white;
+	font-weight: bold;
+}
+
+.descripcion button#eliminar {
+	background-color: red;
+}
+
+.descripcion button#modificar {
+	background-color: green;
+}
+
+.descripcion button#agregar {
+	background-color: var(--gray);
+}
+
+.caracteristica {
+	text-align: center;
+}
+
+.detalle {
+	text-align: center;
+	font-size: 10px;
+}
+
+.precio {
+	text-align: center;
+	font-size: 18px;
+	color: blue;
+}
+
+p {
+	line-height: 1.2rem;
+}
+
+h4, h2 {
+	margin-bottom: .5rem;
+}
+
+@media (min-width: 769px) {
+	.producto {
+		width: 45%;
+	}
+
+	.img {
+		width: 45%;
+	}
+
+	.descripcion-contenedor {
+		width: 45%;
+	}
+
+	.descripcion {
+		padding: 10px;
+		margin-top: 20px;
+	}
+
+	.caracteristica {
+		text-align: start;
+		font-size: 20px;
+	}
+
+	.detalle {
+		text-align: start;
+		font-size: 14px;
+	}
+
+	.precio {
+		text-align: end;
+		font-size: 30px;
+	}
+}

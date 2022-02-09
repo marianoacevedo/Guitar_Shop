@@ -1,0 +1,137 @@
+/* HEADER */
+#site-header {
+	background-color: var(--secondary-background);
+	padding: 5px 1em;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+header {
+	margin-bottom: 100px;
+}
+
+.top-header {
+	justify-content: space-around;
+	align-content: center;
+}
+
+#hamburguer-container,
+#search-container,
+#shop-cart-container,
+#profile-container {
+	justify-content: center;
+	align-content: center;
+}
+
+#logo-container {
+	justify-content: center;
+	align-content: center;
+	width: 44%;
+}
+
+#logo {
+	width: 90%;
+	height: 100px;
+}
+
+#searchValue {
+	display: none;
+}
+
+#search-form {
+	flex-wrap: nowrap;
+}
+
+#categoria-button,
+#search-button,
+#shop-cart-button,
+#profile-button {
+	color: var(--white);
+	background-color: var(--transparent);
+	border: 0px;
+	font-size: 1.5em;
+}
+
+.banner-image {
+	width: 100%;
+}
+
+/* Menú de Login */
+header .seccionMenuDesplegable {
+	position: relative;
+	align-self: center;
+}
+
+header #profile-container {
+	height: 60px;
+	width: 60px;
+	overflow: hidden;
+	border-radius: 100%;
+}
+
+header .dropdown-content {
+	position: absolute;
+	z-index: 2;
+	border-radius: 10px;
+	border: solid 1px var(--secondary-background);
+	background-color: var(--primary-background);
+}
+header .dropdown-content a {
+	padding: 8px 16px;
+	display: block;
+	color: var(--gray);
+	font-weight: bold;
+	font-family: "Lora", serif;
+}
+
+header .imagenAncha {
+	height: 104%;
+	width: auto;
+}
+header .imagenAlta {
+	width: 100%;
+	height: auto;
+}
+header .imagenCuadrada {
+	width: 100%;
+	height: 100%;
+}
+
+#menu-usuario {
+	width: 160px;
+	right: 0px;
+	top: 50px;
+}
+
+#menu-categorias {
+	width: 170px;
+	left: 0px;
+	top: 35px;
+}
+
+#shop-cart-container {
+	position: relative;
+}
+
+#contador {
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	line-height: normal;
+	font-size: 1rem;
+	position: absolute;
+	top: 17px;
+	right: 1px;
+	padding: 2px 7px;
+	border-radius: 50%;
+	border: white 1px solid
+}
+
+.fa-bars,
+.fa-search,
+.fa-shopping-basket,
+#profile-container {
+	cursor: pointer
+}
