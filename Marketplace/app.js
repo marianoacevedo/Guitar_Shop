@@ -8,9 +8,9 @@ const methodOverride = require("method-override");
 const cors = require("cors");
 const app = express();
 const cookieRecordar = require("./Middlewares/cookieRecordar");
-const validarUserLogged = require("./middlewares/validarUserLogged");
+const validarUserLogged = require("./Middlewares/validarUserLogged");
 const categoriaRepository = require("./repositories/categoriaRepository");
-
+const http = require('http');
 // ************ Middlewares ************
 app.use(
     session({ secret: "Secreto", resave: false, saveUninitialized: false })

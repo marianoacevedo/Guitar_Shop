@@ -3,7 +3,7 @@ const carritoController = require("../controllers/carritoController");
 const router = express.Router();
 
 // Middlewares
-const soloUsuarios = require("../middlewares/soloUsuarios");
+const soloUsuarios = require("../Middlewares/soloUsuarios");
 
 // Rutas
 router.get("/agregar/:id", soloUsuarios, carritoController.agregarCarrito);

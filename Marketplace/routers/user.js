@@ -4,14 +4,14 @@ const path = require("path");
 const userController = require(path.join(__dirname,"../controllers/userController"));
 
 // Middlewares
-const uploadFile = require(path.join(__dirname,"../middlewares/multerUsuario"));
-const validarUsuario = require(path.join(__dirname,"../middlewares/validarUsuario"));
-const validarImagenCrear = require(path.join(__dirname,"../middlewares/validarImagenCrear"));
-const validarLogin = require(path.join(__dirname,"../middlewares/validarLogin"));
-const validarRecupero = require(path.join(__dirname,"../middlewares/validarRecupero"));
-const soloVisitas = require("../middlewares/soloVisitas");
-const soloUsuarios = require("../middlewares/soloUsuarios");
-const soloAdmin = require("../middlewares/soloAdmin");
+const uploadFile = require(path.join(__dirname,"../Middlewares/multerUsuario"));
+const validarUsuario = require(path.join(__dirname,"../Middlewares/validarUsuario"));
+const validarImagenCrear = require(path.join(__dirname,"../Middlewares/validarImagenCrear"));
+const validarLogin = require(path.join(__dirname,"../Middlewares/validarLogin"));
+const validarRecupero = require(path.join(__dirname,"../Middlewares/validarRecupero"));
+const soloVisitas = require("../Middlewares/soloVisitas");
+const soloUsuarios = require("../Middlewares/soloUsuarios");
+const soloAdmin = require("../Middlewares/soloAdmin");
 
 // Rutas
 router.get("/crear", soloVisitas, userController.crearForm);

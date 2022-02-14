@@ -3,7 +3,7 @@ const ventaController = require("../controllers/ventaController");
 const router = express.Router();
 
 // Middlewares
-const soloUsuarios = require("../middlewares/soloUsuarios");
+const soloUsuarios = require("../Middlewares/soloUsuarios");
 
 // Rutas
 router.get("/kickOff", soloUsuarios, ventaController.kickOff);

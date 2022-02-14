@@ -4,11 +4,11 @@ const path = require("path");
 const productController = require(path.join(__dirname,"../controllers/productController"));
 
 // Middlewares
-const uploadFile = require(path.join(__dirname,"../middlewares/multerProducto"));
-const validarProducto = require(path.join(__dirname,"../middlewares/validarProducto"));
-const validarImagenCrear = require(path.join(__dirname,"../middlewares/validarImagenCrear"));
-const validarImagenEditar = require(path.join(__dirname,"../middlewares/validarImagenEditar"));
-const soloUsuarios = require("../middlewares/soloUsuarios");
+const uploadFile = require(path.join(__dirname,"../Middlewares/multerProducto"));
+const validarProducto = require(path.join(__dirname,"../Middlewares/validarProducto"));
+const validarImagenCrear = require(path.join(__dirname,"../Middlewares/validarImagenCrear"));
+const validarImagenEditar = require(path.join(__dirname,"../Middlewares/validarImagenEditar"));
+const soloUsuarios = require("../Middlewares/soloUsuarios");
 
 // Rutas
 router.get("/crear", soloUsuarios, productController.crearForm);
