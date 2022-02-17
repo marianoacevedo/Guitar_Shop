@@ -10,10 +10,10 @@ const app = express();
 const cookieRecordar = require("./Middlewares/cookieRecordar");
 const validarUserLogged = require("./Middlewares/validarUserLogged");
 const categoriaRepository = require("./repositories/categoriaRepository");
-const http = require('http');
 // ************ Middlewares ************
 app.use(
-    session({ secret: "Secreto", resave: false, saveUninitialized: false })
+    session({ secret: "Secreto", resave: false, saveUninitialized: false,
+    })
 );
 app.use(cookieRecordar);
 app.use(cookies());
@@ -41,7 +41,10 @@ app.set("views", [
 ]);
 
 // ****** Conectando con el Navegador *******
-app.listen(3001, () => console.log("Servidor funcionando en puerto 3001..."));
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
 // ************* Ruteadores ****************
 const rutaProducto = require("./routers/product");
 const rutaUsuario = require("./routers/user");
@@ -56,3 +59,6 @@ app.use("/api", rutaAPI);
 app.use("/carrito", rutaCarrito);
 app.use("/ventas", rutaVenta);
 app.use("/", rutaMain);
+
+
+
