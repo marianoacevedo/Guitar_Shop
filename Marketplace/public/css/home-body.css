@@ -23,7 +23,7 @@ main {
 
 .product {
 	width: 45%;
-	margin: 0px auto;
+	margin: 10px auto;
 	background-color: var(--white);
 	position: relative;
 }
