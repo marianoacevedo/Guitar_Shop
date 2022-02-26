@@ -38,4 +38,5 @@ https://github.com/marianoacevedo/Guitar_Shop
 
 
 ###  Notas
-Las apis estan hechas para que se consuman en el front-end de algun framework.
+"api.js" estan hechas para que se consuman en el front-end con algun framework. 
+Devuelven detalles, info.
